@@ -4,7 +4,7 @@ just want to hapyy puzzle!
 - Swift3
 - Xcode8
 
-![screenshot](https://raw.github.com/isaced/ISHappyPuzzle/master/screenshot.png)
+![screenshot](https://raw.github.com/isaced/ISHappyPuzzle/master/screenshot.jpg)
 
 #### Layout
 
@@ -26,7 +26,7 @@ just want to hapyy puzzle!
 
 #### Go
 
-使用非常简单，如下：
+使用非常简单，可以从文件或者网络中读取布局模型数据，然后通过 `ISHappyPuzzleView` 装载：
 
 ```
 let puzzleView = ISHappyPuzzleView()
