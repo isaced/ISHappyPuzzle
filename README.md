@@ -34,3 +34,9 @@ puzzleView.loadLayout(layoutInfo)
 ```
 
 ...
+
+#### Cocoapods
+
+```
+pod 'ISHappyPuzzle'
+```
