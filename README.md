@@ -29,9 +29,17 @@ just want to hapyy puzzle!
 使用非常简单，可以从文件或者网络中读取布局模型数据，然后通过 `ISHappyPuzzleView` 装载：
 
 ```
+// 初始化
 let puzzleView = ISHappyPuzzleView()
+
+// 加载布局
 puzzleView.loadLayout(layoutInfo)
+
+// 截图
+let screenshot = puzzleView.screenShot()
 ```
+
+
 
 ...
 
