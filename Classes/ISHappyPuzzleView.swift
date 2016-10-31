@@ -57,10 +57,18 @@ class ISHappyPuzzleView : UIView {
             return nil
         }
         
-        let renderer = UIGraphicsImageRenderer(size: bounds.size)
-        let image = renderer.image { ctx in
-            drawHierarchy(in: bounds, afterScreenUpdates: true)
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(size: bounds.size)
+            let image = renderer.image { ctx in
+                drawHierarchy(in: bounds, afterScreenUpdates: true)
+            }
+            return image
+        } else {
+            UIGraphicsBeginImageContextWithOptions(self.frame.size, self.isOpaque, UIScreen.main.scale)
+            self.layer.render(in: UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return image
         }
-        return image
     }
 }
