@@ -4,7 +4,7 @@ just want to hapyy puzzle!
 - Swift3
 - Xcode8
 
-![screenshot](https://raw.github.com/isaced/ISHappyPuzzle/master/screenshot.jpg)
+![screenshot](https://raw.github.com/isaced/ISHappyPuzzle/master/screenshot.gif)
 
 #### Layout
 
