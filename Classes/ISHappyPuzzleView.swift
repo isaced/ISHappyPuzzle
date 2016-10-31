@@ -8,13 +8,13 @@
 
 import UIKit
 
-typealias ISHappyPuzzleViewLayoutConfig = (Int, UIImageView) -> Swift.Void
-
-class ISHappyPuzzleView : UIView {
+public class ISHappyPuzzleView : UIView {
     
-    var imageViewPool: Set<UIImageView> = Set()
+    public typealias ISHappyPuzzleViewLayoutConfig = (Int, UIImageView) -> Swift.Void
     
-    func loadLayout(_ layout: [[String:Float]], config: ISHappyPuzzleViewLayoutConfig? = nil, complate: (()->())? = nil) {
+    private var imageViewPool: Set<UIImageView> = Set()
+    
+    public func loadLayout(_ layout: [[String:Float]], config: ISHappyPuzzleViewLayoutConfig? = nil, complate: (()->())? = nil) {
         
         let puzzleWidth = bounds.width
         let puzzleHeight = bounds.height
@@ -52,7 +52,7 @@ class ISHappyPuzzleView : UIView {
         complate?()
     }
     
-    func screenShot() -> UIImage? {
+    public func screenShot() -> UIImage? {
         guard frame.size.height > 0 && frame.size.width > 0 else {
             return nil
         }
